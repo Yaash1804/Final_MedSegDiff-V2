@@ -18,8 +18,8 @@ class ISICDataset(Dataset):
 
 
         df = pd.read_csv(os.path.join(data_path, 'ISBI2016_ISIC_Part3B_' + mode + '_GroundTruth.csv'), encoding='gbk')
-        self.name_list = df.iloc[:,1].tolist()
-        self.label_list = df.iloc[:,2].tolist()
+        self.name_list = df.iloc[:,0].tolist()
+        self.label_list = df.iloc[:,1].tolist()
         self.data_path = data_path
         self.mode = mode
 
